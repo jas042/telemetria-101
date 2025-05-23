@@ -1,0 +1,4 @@
+6000=01234567 //modem teste
+6001=00005678 //modem estacao macas
+6002=00009ABC //modem estacao uvas
+#

@@ -1,0 +1,64 @@
+services:
+
+  abs_gateway:
+    image: swr.abstelemetria.com/abs-gateway:v1.20
+    container_name: abs_gateway
+    #command: [-port=5901 -mport=5901]  #Adiciona argumentos ao comando
+    network_mode: "host"
+    tty: true        # Habilita terminal interativo
+    stdin_open: true # Mantém o STDIN aberto
+    restart: unless-stopped
+    volumes:
+      - ./config/abs_gateway.config:/opt/abs/ABS_Gateway.config
+    ulimits:
+      nproc: 65535
+#    environment:
+#      - JAVA_TOOL_OPTIONS=-Xss128k
+
+  master0:
+    image: swr.abstelemetria.com/abs-master0:v1.03
+    container_name: master0
+    network_mode: "host"    
+    tty: true        # Habilita terminal interativo
+    stdin_open: true # Mantém o STDIN aberto
+    restart: unless-stopped
+    volumes:
+      - ./config/master0.config:/opt/abs/Master0.config
+      - ./master_zero/master0.txt:/opt/abs/master0.txt
+      - ./master_zero/dados:/opt/abs/dados
+    ulimits:
+      nproc: 65535
+#    environment:
+#      - JAVA_TOOL_OPTIONS=-Xss192k
+
+  master_main:
+    image: swr.abstelemetria.com/abs-master:v6.02
+    container_name: master_main
+    network_mode: "host"    
+    tty: true        # Habilita terminal interativo
+    stdin_open: true # Mantém o STDIN aberto
+    restart: unless-stopped
+    volumes:
+      - ./config/master_main.config:/opt/abs/Master.config
+      - ./master_main/portas.txt:/opt/abs/portas.txt
+      - ./master_main/master.txt:/opt/abs/master.txt
+    ulimits:
+      nproc: 65535
+#    environment:
+#      - JAVA_TOOL_OPTIONS=-Xss192k
+
+  master_mtr:
+    image: swr.abstelemetria.com/abs-master-mtr:v6.02
+    container_name: master_mtr
+    network_mode: "host"
+    tty: true        # Habilita terminal interativo
+    stdin_open: true # Mantém o STDIN aberto
+    restart: unless-stopped
+    volumes:
+      - ./config/master_mtr.config:/opt/abs/Master_MTR.config
+      - ./master_mtr/portas.txt:/opt/abs/portas.txt
+      - ./master_mtr/master.txt:/opt/abs/master.txt
+    ulimits:
+      nproc: 65535
+#    environment:
+#      - JAVA_TOOL_OPTIONS=-Xss192k
