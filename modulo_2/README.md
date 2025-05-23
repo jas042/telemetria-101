@@ -1,4 +1,4 @@
-# Exercício Módulo 2
+# Exercício Módulo 2 :: Docker Compose
 
 ## Objetivo
 
@@ -50,7 +50,7 @@ docker-compose up -d
 Verifique se os containers estão rodando com o comando:
 
 ```bash
-docker ps
+docker-compose ps
 ```
 ---
 

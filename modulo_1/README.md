@@ -1,4 +1,4 @@
-# Exercício Módulo 1
+# Exercício Módulo 1 :: Docker
 
 Subir um container NGINX na porta 8080, testar o acesso via navegador, criar um volume local mapeado e remover o container após os testes.
 

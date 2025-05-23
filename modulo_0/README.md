@@ -1,23 +1,31 @@
-# Preparando o Windão
+# Exercício Módulo 0 :: Ferramentas
 
-## Download das ferramentas Putty e Winscp
+## Objetivo
+
+Configurar o ambiente com as ferramentas essenciais
+
+## Passos para executar
+
+### Preparando o Windão
+
+#### Download das ferramentas Putty e Winscp
 
 - [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 - [Winscp](https://winscp.net/eng/download.php)
 
-# Preparando a VM Linux
+### Preparando a VM Linux
 Utilize o [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) para acessar a VM Linux e na linha de comando execute:
 
 ```sh
 apt-get update 
 ```
 
-## Instalando os pacotes essenciais
+#### Instalando os pacotes essenciais
 ```sh
 apt-get install git wget curl
 ```
 
-## Instalando o pacote Docker
+#### Instalando o pacote Docker
 
 Passos para instalação:
 
