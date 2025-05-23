@@ -1,6 +1,6 @@
-# Exercicio Módulo 1
+# Exercício Módulo 1
 
-1) Subir um container NGINX na porta 8080, testar o acesso via navegador, criar um volume local mapeado e remover o container após os testes.
+Subir um container NGINX na porta 8080, testar o acesso via navegador, criar um volume local mapeado e remover o container após os testes.
 
 # Subir container NGINX na porta 8080
 
