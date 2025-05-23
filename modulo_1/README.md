@@ -55,7 +55,7 @@ docker run -d --name nginx-volume -p 8080:80 -v ~/nginx-html:/usr/share/nginx/ht
 http://<IP-da-VM>:8080
 ```
 
-Deverá aparecer a mensagem **"Olá, Docker com NGINX!"**.
+Deverá aparecer a mensagem **"Sabadão com Docker e NGINX!"**.
 
 ## Verificar o volume montado dentro do container
 
