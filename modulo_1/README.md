@@ -1,13 +1,8 @@
 # Exercicio Módulo 1
 
-## 1) Subir o servidor o WEB Server Nginx na porta externa 8080 e verificar os acesso
-## 2) Subir o servidor o WEB Server Nginx com um volume compartilhado na porta externa 8080 e verificar o acesso
+1) Subir um container NGINX na porta 8080, testar o acesso via navegador, criar um volume local mapeado e remover o container após os testes.
 
-# Executando NGINX com Docker
-
-Este guia tem como objetivo demonstrar como subir um container NGINX na porta 80, testar o acesso via navegador, criar um volume local mapeado e remover o container após os testes.
-
-## Subir container NGINX na porta 8080
+# Subir container NGINX na porta 8080
 
 ```bash
 docker run -d --name nginx-test -p 8080:80 nginx
@@ -24,6 +19,11 @@ http://<IP-da-VM>:8080
 ```
 
 Substitua `<IP-da-VM>` pelo IP da sua máquina ou servidor. Você deverá visualizar a página padrão do NGINX.
+
+## Verifique os logs do container para visualizar seu request
+```bash
+docker logs nginx-test
+```
 
 ## Remover o container
 
@@ -62,8 +62,12 @@ http://<IP-da-VM>:8080
 
 Deverá aparecer a mensagem **"Sabadão com Docker e NGINX!"**.
 
-## Verificar o volume montado dentro do container
+## Verifique os logs do container para visualizar seu request
+```bash
+docker logs nginx-volume
+```
 
+## Verificar o volume montado dentro do container
 Entre no container:
 
 ```bash
