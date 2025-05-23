@@ -38,7 +38,7 @@ services:
 Na VM pode ser realizado o download com wget:
 
 ```yaml
-wget
+wget https://raw.githubusercontent.com/jas042/telemetria-101/refs/heads/main/modulo_2/docker-compose.yml
 ```
 
 Para iniciar os serviços, execute:
@@ -58,8 +58,8 @@ docker ps
 
 Acesse os seguintes endereços:
 
-- NGINX: http://<IP VM Linux>:8080
-- Apache: http://<IP VM Linux>:8081
+- NGINX: http://<IP-da-VM>:8080
+- Apache: http://<IP-da-VM>:8081
 
 Você deve ver as páginas padrão de boas-vindas de cada servidor.
 
