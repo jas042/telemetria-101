@@ -60,18 +60,10 @@ usuario: admin
 senha: admin
 ```
 ---
-### 4) Verifique se o Telegraf esta coletando os dados
-
-```bash
-docker-compose logs telegraf
-```
----
-### 5) Adicionar o banco de dados no Grafana
+### 4) Adicionar o banco de dados no Grafana
 
 1. No Grafana vá para a área de Data Sources
-No menu lateral esquerdo, clique no ícone de engrenagem ⚙️ (Configuration).
-
-Selecione "Data Sources".
+No menu lateral esquerdo, selecione "Connections" --> "Data sources".
 
 Clique no botão “Add data source” (Adicionar fonte de dados).
 
@@ -99,39 +91,23 @@ Agora você pode criar painéis (dashboards) no Grafana usando essa fonte de dad
 
 ---
 ### Criar um novo Dashboard no Grafana
-No menu lateral, clique no ícone de “+” (plus) → selecione Dashboard
+No menu lateral, clique → selecione Dashboard
 
-Clique em “Add new panel”
+1. Clique em “+Create Dashboard” e em "Add visualization"
 
-1. Configure a fonte de dados
+2. Selecione a fonte de dados
 No topo, escolha a fonte de dados MySQL que você configurou anteriormente
 
-2. Escreva a query SQL
-Na aba Query, insira uma query como esta:
+3. Escreva a query SQL
+Na aba Query Builder, selecione a query como esta:
 
 ```
-SELECT
-  UNIX_TIMESTAMP(data_hora) as time_sec,
-  pulso_energia_ativa as value,
-  medidor_id as metric
-FROM
-  leitura_energia
-WHERE
-  $__timeFilter(data_hora)
+Dataset: telgraf
+Table: modbus
+Column: *
 ```
 
-Explicação:
-
-time_sec: converte a data/hora para timestamp (formato que o Grafana entende como tempo)
-
-value: é o dado que será plotado no gráfico
-
-metric: opcional, separa por categoria (ex: por medidor_id)
-
-__timeFilter(data_hora): macro do Grafana que aplica o filtro de tempo automático
-
-3. Visualize o gráfico
-Abaixo da query, selecione o tipo de visualização (por padrão é "Time series")
+3. Clique em "Run Query" e visualize o gráfico
 
 Veja se os dados aparecem corretamente no gráfico
 
@@ -145,9 +121,9 @@ Ajuste o eixo Y, cores, rótulos etc. conforme desejado
 5. Salvar o Dashboard
 Clique no ícone de disquete no topo direito → selecione Save dashboard
 
-Dê um nome (ex: Monitoramento Energia) e clique em Save
+Dê um nome (ex: Monitoramento Energia) e clique em Save e em "Back to Dashboard"
 
-6. Bom trabalho, visualize os dados em tempo real.
+6. Bom trabalho, visualize os dados em tempo real, no menu superior é possivel alterar o tempo de visualizacao da coleta.
 ---
 ## Resultado Esperado
 
