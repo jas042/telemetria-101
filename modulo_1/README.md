@@ -1,4 +1,9 @@
-# Guia Rápido - Executando NGINX com Docker
+# Exercicio Módulo 1
+
+## 1) Subir o servidor o WEB Server Nginx na porta externa 8080 e verificar os acesso
+## 2) Subir o servidor o WEB Server Nginx com um volume compartilhado na porta externa 8080 e verificar o acesso
+
+# Executando NGINX com Docker
 
 Este guia tem como objetivo demonstrar como subir um container NGINX na porta 80, testar o acesso via navegador, criar um volume local mapeado e remover o container após os testes.
 
