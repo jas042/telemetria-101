@@ -8,8 +8,7 @@ Preparando o Windão
 
 Preparando a VM Linux
 ---
-
-Na linha de comando execute da VM Linux execute o comando:
+Utilize o [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) para acessar a VM Linux e na linha de comando execute:
 
 ```sh
 apt-get update 
