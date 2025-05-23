@@ -36,6 +36,13 @@ senha: admin
 
 Navegue por todas as funcionalidades da ferramenta.
 
+### 2) Quando finalizar remova o container do grafana
+
+```
+docker ps
+docker rm <ID DO CONTAINER>
+```
+
 ---
 
 ## Resultado Esperado

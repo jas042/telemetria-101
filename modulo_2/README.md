@@ -58,8 +58,11 @@ docker-compose ps
 
 Acesse os seguintes endereços:
 
+
+```
 - NGINX: http://<IP-da-VM>:8080
 - Apache: http://<IP-da-VM>:8081
+```
 
 Você deve ver as páginas padrão de boas-vindas de cada servidor.
 
