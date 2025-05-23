@@ -19,7 +19,11 @@ docker run -d -p 3000:3000 grafana/grafana
 
 Acesse os seguintes endereços:
 
-- Grafana: http://<IP-da-VM>:3000
+- Grafana: 
+
+```
+http://<IP-da-VM>:3000
+```
 
 Você deve ver a páginas padrão de boas-vindas Grafana.
 
