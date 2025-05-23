@@ -14,12 +14,12 @@ Utilize o [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 apt-get update 
 ```
 
+## Instalando os pacotes essenciais
 ```sh
 apt-get install git wget curl
 ```
 
-Instalando o pacote Docker
----
+## Instalando o pacote Docker
 
 Passos para instalação:
 
