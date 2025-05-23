@@ -1,13 +1,12 @@
-Preparando a VM Linux
+Preparando o Windão
 ---
 
-## Computador para rodar os programas
+## Download das ferramentas Putty e Winscp
 
-Os scripts foram desenvolvidos e testados no Linux Debian 12 (64 bits).
+- [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+- [Winscp](https://winscp.net/eng/download.php)
 
-Recomendamos utilizar o Debian ou sistemas baseados no Debian (Ubuntu, MX Linux, etc)
-
-Instalando os pacote git, wget, curl
+Preparando a VM Linux
 ---
 
 Na linha de comando execute da VM Linux execute o comando:
