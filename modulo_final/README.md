@@ -109,7 +109,7 @@ No topo, escolha a fonte de dados MySQL que você configurou anteriormente
 2. Escreva a query SQL
 Na aba Query, insira uma query como esta:
 
-```sql
+```
 SELECT
   UNIX_TIMESTAMP(data_hora) as time_sec,
   pulso_energia_ativa as value,
@@ -118,7 +118,7 @@ FROM
   leitura_energia
 WHERE
   $__timeFilter(data_hora)
-```sql
+```
 
 Explicação:
 
