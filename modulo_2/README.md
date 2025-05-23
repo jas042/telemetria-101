@@ -6,6 +6,12 @@ Subir dois Webservers diferentes usando Docker Compose:
 - **NGINX** na porta `8080`
 - **Apache HTTPD** na porta `8081`
 
+Testar os acesso com o navegador para a porta 8080 e 8081
+
+Verificar os Logs de ambos os containers
+
+Remover os containers
+
 ## Passos para executar
 
 ### 1) Subir dois Webservers (NGINX e Apache)
@@ -27,6 +33,12 @@ services:
     ports:
       - "8081:80"
     container_name: apache_server
+```
+
+Na VM pode ser realizado o download com wget:
+
+```yaml
+wget
 ```
 
 Para iniciar os serviços, execute:
