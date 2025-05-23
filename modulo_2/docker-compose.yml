@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    container_name: nginx_server
+
+  apache:
+    image: httpd:latest
+    ports:
+      - "8081:80"
+    container_name: apache_server
