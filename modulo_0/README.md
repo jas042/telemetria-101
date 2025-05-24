@@ -1,4 +1,4 @@
-# ExercÌcio MÛdulo 0 :: Ferramentas
+# Exerc√≠cio M√≥dulo 0 :: Ferramentas
 
 ## Objetivo
 
@@ -6,7 +6,7 @@ Configurar o ambiente com as ferramentas essenciais
 
 ## Passos para executar
 
-### Preparando o Wind„o
+### Preparando o Wind√£o
 
 #### Download das ferramentas Putty e Winscp
 
@@ -27,7 +27,7 @@ apt-get install git wget curl
 
 #### Instalando o pacote Docker
 
-Passos para instalaÁ„o:
+Passos para instala√ß√£o:
 
 Copiar o arquivo "install_docker_ce.sh" para a VM Linux
 ```sh
@@ -39,11 +39,11 @@ Executar:
 bash install_docker_ce.sh
 ```
 
-Acompanhe a instalaÁ„o e verifique as mensagens apresentadas.  
+Acompanhe a instala√ß√£o e verifique as mensagens apresentadas.  
 
-Ao final, ser„o apresentadas as versıes do Docker e Docker Compose.
+Ao final, ser√£o apresentadas as vers√µes do Docker e Docker Compose.
 
-## Validado as instalaÁıes
+## Validando as instala√ß√µes
 
 Execute os comando abaixo e verifique as saidas:
 
@@ -53,3 +53,8 @@ git version
 wget --help
 curl -h
 ```
+## Validando a conex√£o ssh
+
+Execute o Putty e abra uma conex√£o com a VM Linux.
+
+
