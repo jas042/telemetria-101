@@ -1,0 +1,5 @@
+6000=0000BE9E //modem teste
+6001=0000AA18 //modem teste
+6002=0000A98E //modem teste
+#
+

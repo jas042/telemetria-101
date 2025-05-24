@@ -1,0 +1,4 @@
+master_id = 1
+ip_gprs = abs_gateway
+port = 5901
+#

@@ -1,0 +1,27 @@
+services:
+
+  abs_gateway:
+    image: swr.abstelemetria.com/abs-gateway:v1.20
+    container_name: abs_gateway
+    network_mode: "host"
+    tty: true        # Habilita terminal interativo
+    stdin_open: true # Mantém o STDIN aberto
+    restart: unless-stopped
+    volumes:
+      - ./config/abs_gateway.config:/opt/abs/ABS_Gateway.config
+    ulimits:
+      nproc: 65535
+
+  master_main:
+    image: swr.abstelemetria.com/abs-master:v6.02
+    container_name: master_main
+    network_mode: "host"    
+    tty: true        # Habilita terminal interativo
+    stdin_open: true # Mantém o STDIN aberto
+    restart: unless-stopped
+    volumes:
+      - ./config/master_main.config:/opt/abs/Master.config
+      - ./master_main/portas.txt:/opt/abs/portas.txt
+      - ./master_main/master.txt:/opt/abs/master.txt
+    ulimits:
+      nproc: 65535
