@@ -1,4 +1,4 @@
-# Exercício Módulo 5 :: Grafana
+# Exercício Módulo 4 :: Grafana
 
 ## Objetivo
 
