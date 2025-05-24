@@ -44,13 +44,13 @@ wget https://raw.githubusercontent.com/jas042/telemetria-101/refs/heads/main/mod
 Para iniciar os serviços, execute:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 Verifique se os containers estão rodando com o comando:
 
 ```bash
-docker-compose ps
+docker compose ps
 ```
 ---
 
@@ -92,7 +92,7 @@ docker logs -f apache_server
 Para parar e remover os containers criados:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ---
